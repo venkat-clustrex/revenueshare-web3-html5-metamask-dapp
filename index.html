@@ -200,7 +200,7 @@
         var abi = [{ "constant": false, "inputs": [{ "name": "_vendor1", "type": "address" }, { "name": "_vendor2", "type": "address" }, { "name": "percent1", "type": "uint256" }], "name": "splitRevenue", "outputs": [], "payable": true, "type": "function" }, { "anonymous": false, "inputs": [{ "indexed": false, "name": "vendor1", "type": "address" }, { "indexed": false, "name": "amount1", "type": "uint256" }, { "indexed": false, "name": "vendor2", "type": "address" }, { "indexed": false, "name": "amount2", "type": "uint256" }], "name": "Transfered", "type": "event" }];
 
         window.web3 = new Web3(web3.currentProvider);
-        var address = "0xb25a17c80aaf0f7a9dc170602d98ecaf3cf46a8c";
+        var address = "0xee6a636bf08efc0b36306d16570e53e41e777ef4";
         var contractObj = window.web3.eth.contract(abi).at(address);
 
         contractObj.Transfered().watch(function (error, result) {
