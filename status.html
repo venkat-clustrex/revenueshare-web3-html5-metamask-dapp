@@ -1,0 +1,53 @@
+
+<html lang="en">
+
+<head>
+  <title>Status</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+    .border {
+      margin-top: 25px;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+</style>
+<body>
+    <div class="col-md-6 col-md-offset-3">
+        <div class="row border">
+            <h3>Peer Details</h3>
+        </div>
+        <div class="row border">
+            <h5>Peer Count : <span id="peercount"></span></h5>             
+        </div>
+        
+    </div>
+</body>
+<script>
+window.addEventListener('load', function () {
+      if (typeof web3 !== 'undefined') {
+        window.web3 = new Web3(web3.currentProvider);
+        console.log("MetaMask Injected......!");
+        console.log("provider",window.web3);     
+           window.web3.net.getPeerCount((err,res) =>{
+            if(!err){
+                console.log("value",res)
+                document.getElementById("peercount").innerHTML=res;
+            } 
+            else{
+                console.log("Error",err)
+            }         
+           })          
+               
+      } else {
+        console.log('No web3? You should consider trying MetaMask!')
+        window.web3 = new Web3(new Web3.providers.HttpProvider("http://54.254.212.220:8545"));
+      }
+    })
+    
+</script>
+</html>
