@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-
-
 <html lang="en">
 
 <head>
@@ -14,16 +12,18 @@
 </head>
 
 <body>
-
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
       <div class="panel panel-login">
         <div class="panel-heading">
           <div class="row border">
             <div class="alert alert-success" id="event">
-              <div class="row"><strong>Success!</strong> Your Amount has Transfered...</div>
-              <div class="row">Tx hash : <a href="#" id="hash" target="_blank"></a></div>
-            </div> 
+              <div class="row">
+                <strong>Success!</strong> Your Amount has Transfered...</div>
+              <div class="row">Tx hash :
+                <a href="#" id="hash" target="_blank"></a>
+              </div>
+            </div>
           </div>
           <div id="DApp">
             <div class="row border">
@@ -52,10 +52,9 @@
                 <input type="text" name="v1balance" id="v1balance" tabindex="1" class="form-control" value="" disabled required>
               </div>
               <div class="col-sm-3">
-                <input type="text" name="v1amount" id="v1amount" tabindex="1" class="form-control" placeholder="Percentage" value="" onblur="vendor1ProfileOnChange(this.value)"
+                <input type="text" name="v1amount" id="v1amount" tabindex="1" class="form-control" placeholder="" value="" onblur="vendor1ProfileOnChange(this.value)"
                   required>
               </div>
-
             </div>
             <div class="row border">
               <div class="col-sm-6">
@@ -66,12 +65,12 @@
                 <input type="text" name="v2balance" id="v2balance" tabindex="1" class="form-control" placeholder="" value="" disabled>
               </div>
               <div class="col-sm-3">
-                <input type="text" name="v2amount" id="v2amount" tabindex="1" class="form-control" disabled placeholder="Percentage" value="">
+                <input type="text" name="v2amount" id="v2amount" tabindex="1" class="form-control" disabled placeholder="" value="">
               </div>
             </div>
             <div class="row border">
               <div class="col-sm-12">
-                <input type="text" name="amount" id="amount" tabindex="1" class="form-control" placeholder="Total Amount has to be transferred"
+                <input type="text" name="amount" id="amount" tabindex="1" class="form-control" placeholder="Amount of Ether to be transferred"
                   value="" required>
               </div>
             </div>
@@ -87,13 +86,10 @@
               </center>
             </div>
           </div>
-
-
         </div>
       </div>
     </div>
   </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="script.js"></script>
 </body>
 
