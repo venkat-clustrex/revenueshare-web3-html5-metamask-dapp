@@ -1,1 +1,3 @@
-# revnueshare-web3-html5-metamask-dapp
+# Revenue Share Dapp using Web3 Html5 Metamask Solidity
+
+More details [[Gollum|gollum.pdf]]
